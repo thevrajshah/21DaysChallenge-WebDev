@@ -1,77 +1,73 @@
-$accent: #0a84c5;
+$accent: #f81b39;
 $light: #edf0f1;
 $dark: rgb(22, 23, 26);
 $primaryfont: 'Barlow', sans-serif;
 
 @import url('https://fonts.googleapis.com/css?family=Barlow:500,700,900&display=swap');
+@import url('*/jack_input.ttf');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: $dark;
     font-family: $primaryfont;
 }
 html{
     scroll-behavior: smooth;
 }
-header{
+nav{
+    list-style: none;
     display: flex;
     justify-content: right;
     align-items: center;
     vertical-align: middle;
     font-size: 16px;
     padding: 15px 7%;
-    button{
-        margin-left: 15px;
-        margin-top: 5px;
+    background: $dark;
+    #blg{
+        padding: 8px 16px;
+        background-color: $accent;
+        border: none;
+        color: $light;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 25px;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        &:hover{
+            background-color: #f81b39e0;
+        }
     }
-}
+    ul{ 
+        li{
+            display: inline-block;
+            a{
+                text-decoration: none;
+                font-weight: 700;
+                color: $light;
+                padding: 0px 20px;
+                transition: all 0.3s ease 0s;
+                &:hover{
+                        color: $accent;
+                    }
+            }
+        }
+    }
+}    
 #logo{
     cursor: pointer;
     font-family: $primaryfont;
     margin-right: auto;
     font-weight: 900;
     font-size: 20px;
-    color: $light;
+    color: #fff;
 }
-li, a, button{
-    font-weight: 500;
-    text-decoration: none;
-    color: $light;
-}
-nav{
-    list-style: none;
-    li{
-        display: inline-block;
-        padding: 0px 20px;
-        a{
-            transition: all 0.3s ease 0s;
-            &:hover{
-                color: $accent;
-            }
-        }
-    }
-}
-button{
-    padding: 9px 20px;
-    background-color: $accent;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 20px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    &:hover{
-        background-color: rgba(8, 138, 207, 0.850);
-    }
-}
-.hero{
-    background-color: #777777;
-    padding: 50px;
-    font-family: $primaryfont;
+#hero{
+    display: block;
+    margin: 70px;
+    font-family: 'JackInput', monospace;
     font-weight: 900;
     text-align: center;
-    font-size: 70px;
-    color: $light;
+    font-size: 80px;
+    color: $dark;
 }
