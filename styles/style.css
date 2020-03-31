@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow:500,700,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("*/jack_input.ttf");
 * {
   -webkit-box-sizing: border-box;
@@ -12,7 +13,17 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,8 +36,51 @@ nav {
           align-items: center;
   vertical-align: middle;
   font-size: 16px;
-  padding: 15px 7%;
+  padding: 15px 5%;
+  border-radius: 0px 0px 5px 5px;
   background: #16171a;
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(128, 128, 128, 0.5);
+          box-shadow: 0px 3px 10px 1px rgba(128, 128, 128, 0.5);
+}
+
+nav #logo {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+}
+
+nav #social {
+  margin: 0px auto;
+}
+
+nav #social a {
+  color: #edf0f1;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+nav #social a:hover {
+  color: #f81b39;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  font-weight: 700;
+  color: #edf0f1;
+  padding: 0px 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover {
+  color: #f81b39;
 }
 
 nav #blg {
@@ -46,35 +100,13 @@ nav #blg:hover {
   background-color: #f81b39e0;
 }
 
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-weight: 700;
-  color: #edf0f1;
-  padding: 0px 20px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-nav ul li a:hover {
-  color: #f81b39;
-}
-
-#logo {
-  cursor: pointer;
-  font-family: "Barlow", sans-serif;
-  margin-right: auto;
-  font-weight: 900;
-  font-size: 20px;
-  color: #fff;
+.fa {
+  margin: auto 7px;
 }
 
 #hero {
   display: block;
-  margin: 70px;
+  margin: 140px auto;
   font-family: 'JackInput', monospace;
   font-weight: 900;
   text-align: center;

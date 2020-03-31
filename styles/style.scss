@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:500,700,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('*/jack_input.ttf');
+
 $accent: #f81b39;
 $light: #edf0f1;
 $dark: rgb(22, 23, 26);
 $primaryfont: 'Barlow', sans-serif;
-
-@import url('https://fonts.googleapis.com/css?family=Barlow:500,700,900&display=swap');
-@import url('*/jack_input.ttf');
 
 *{
     box-sizing: border-box;
@@ -15,15 +16,60 @@ $primaryfont: 'Barlow', sans-serif;
 html{
     scroll-behavior: smooth;
 }
+a{
+    text-decoration: none;
+}
+// NavBar Styling
 nav{
+    // fixed position
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    // misc.
+    height: fit-content;
     list-style: none;
     display: flex;
     justify-content: right;
     align-items: center;
     vertical-align: middle;
     font-size: 16px;
-    padding: 15px 7%;
+    padding: 15px 5%;
+    border-radius: 0px 0px 5px 5px;
     background: $dark;
+    box-shadow: 0px 3px 10px 1px rgba(128, 128, 128, 0.5);
+    #logo{
+        cursor: pointer;
+        font-family: $primaryfont;
+        margin-right: auto;
+        font-weight: 900;
+        font-size: 20px;
+        color: #fff;
+    }
+    #social{
+        margin: 0px auto;
+        a{
+            color: $light;
+            font-size: 20px;
+            transition: all 0.3s ease 0s;
+            &:hover{
+                color: $accent;
+            }
+        }
+    }
+    ul{
+        li{
+            display: inline-block;
+            a{
+                font-weight: 700;
+                color: $light;
+                padding: 0px 20px;
+                transition: all 0.3s ease 0s;
+                &:hover{
+                        color: $accent;
+                    }
+            }
+        }
+    }
     #blg{
         padding: 8px 16px;
         background-color: $accent;
@@ -38,33 +84,13 @@ nav{
             background-color: #f81b39e0;
         }
     }
-    ul{ 
-        li{
-            display: inline-block;
-            a{
-                text-decoration: none;
-                font-weight: 700;
-                color: $light;
-                padding: 0px 20px;
-                transition: all 0.3s ease 0s;
-                &:hover{
-                        color: $accent;
-                    }
-            }
-        }
-    }
 }    
-#logo{
-    cursor: pointer;
-    font-family: $primaryfont;
-    margin-right: auto;
-    font-weight: 900;
-    font-size: 20px;
-    color: #fff;
+.fa{
+    margin: auto 7px;
 }
 #hero{
     display: block;
-    margin: 70px;
+    margin: 140px auto;
     font-family: 'JackInput', monospace;
     font-weight: 900;
     text-align: center;
