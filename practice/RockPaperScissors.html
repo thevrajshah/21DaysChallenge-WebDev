@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function computerPlay(){
+        let ar = ["rock", "paper", "scissor"];
+        return ar[Math.floor(Math.random() * ar.length)];
+    }
+    function playRound(playerSelection, computerSelection){
+        playerSelection = playerSelection.toUpperCase();
+        computerSelection = computerSelection.toUpperCase();
+        let rock ="ROCK";
+        let paper ="PAPER";
+        let scissor ="SCISSOR";
+        if (playerSelection == rock && computerSelection == paper) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". You Lost! MOFO");
+        } 
+        else if (playerSelection == paper && computerSelection == scissor) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". You Lost! MOFO");
+        }    
+        else if (playerSelection == scissor && computerSelection == rock) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". You Lost! MOFO");
+        }
+        else if (playerSelection == rock && computerSelection == scissor) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". Damn Boi! You got skills.");
+        }
+        else if (playerSelection == scissor && computerSelection == paper) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". Damn Boi! You got skills.");
+        }
+        else if (playerSelection == paper && computerSelection == rock) {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". Damn Boi! You got skills.");
+        }
+        else {
+            alert("Computer Chooses " + computerSelection.toLowerCase() + ". Don't Mess with me DumbFuck. Try Again")
+        }
+    }
+    function game() {
+        let playerTurn = prompt("Choose Your Weapon! Rock, Paper or Scissor")
+        playRound(playerTurn, computerPlay());
+    }
+    game();
+    game();
+</script>
+</html>
