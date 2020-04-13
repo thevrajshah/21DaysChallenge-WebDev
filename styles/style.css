@@ -271,6 +271,24 @@ p {
           animation: boost 1s 0.5s ease-out;
 }
 
+@-webkit-keyframes boost {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1;
+  }
+}
+
+@keyframes boost {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1;
+  }
+}
+
 @-webkit-keyframes width {
   0% {
     width: 1%;

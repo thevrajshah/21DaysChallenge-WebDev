@@ -91,7 +91,7 @@ nav{
             background-color: #f81b39e0;
         }
     }
-}    
+}
 .fa{
     margin: auto 7px;
 }
@@ -230,6 +230,10 @@ p{
 
 
 // Animations
+@keyframes boost{
+    0%{width: 0;}
+    100%{width: 1;}
+}
 @keyframes width{
     0%{width: 1%;}
     100%{width: 3%;}
