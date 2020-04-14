@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow:500,700,900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,18 +13,20 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #ecf0f1;
+  background-color: #f81b39;
 }
 
 a, li {
   text-decoration: none;
   list-style: none;
+  cursor: pointer;
 }
 
 nav {
   position: fixed;
   width: 100%;
   top: 0px;
+  z-index: 2;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -103,21 +106,58 @@ nav #blg:hover {
   background-color: #f81b39e0;
 }
 
+#home {
+  display: block;
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+#about {
+  display: none;
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+#contact {
+  display: none;
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 .fa {
   margin: auto 7px;
 }
 
+.img {
+  display: block;
+  position: relative;
+  top: 130px;
+  margin: auto;
+  width: 250px;
+  border: 7px solid #ecf0f1;
+  border-radius: 50%;
+}
+
 #hero {
   display: block;
-  margin: 180px auto 100px auto;
-  padding: 0px;
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
+  margin: 130px auto 30px auto;
+  font-family: "Kaushan Script", cursive;
   text-align: center;
-  font-size: 80px;
+  font-size: 55px;
   color: #ecf0f1;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
   -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+#subhero {
+  display: block;
+  font-size: 16px;
+  color: #ecf0f1;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
 }
 
 p {
@@ -125,6 +165,7 @@ p {
 }
 
 .container {
+  z-index: 1;
   border-radius: 15px;
   margin: 100px 30px 30px 30px;
   padding: 20px 70px 20px 70px;
