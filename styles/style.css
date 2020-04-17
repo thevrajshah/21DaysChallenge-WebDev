@@ -54,6 +54,9 @@ nav #logo {
   font-weight: 900;
   font-size: 20px;
   color: #fff;
+  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  visibility: hidden;
 }
 
 nav #social {
@@ -62,6 +65,7 @@ nav #social {
 
 nav #social a {
   color: #ecf0f1;
+  margin: 0px 3px;
   font-size: 20px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -78,7 +82,7 @@ nav ul li {
 nav ul li a {
   font-weight: 700;
   color: #ecf0f1;
-  padding: 0px 20px;
+  padding: 0px 15px;
   font-family: "Barlow", sans-serif;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -94,6 +98,7 @@ nav ul li a .active {
 
 nav #blg {
   padding: 8px 16px;
+  margin-left: 20px;
   background-color: #f81b39;
   font-family: "Barlow", sans-serif;
   border: none;
@@ -274,11 +279,9 @@ p {
   height: 27px;
   margin: 10px 30px;
   border-radius: 10px;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
   background-color: #ddd;
+  -webkit-animation: fade-in 1s 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 1s 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .skills {
@@ -291,76 +294,58 @@ p {
   letter-spacing: 0.5px;
   padding: 3px 5px 15px 0px;
   color: white;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-}
-
-.dsgn {
-  width: 60%;
-  background-color: #4CAF50;
-  -webkit-animation: boost 1.6s 0.5s ease-out;
-          animation: boost 1.6s 0.5s ease-out;
 }
 
 .css {
-  width: 97%;
+  width: 99%;
   background-color: #2196F3;
-  -webkit-animation: boost 2.2s 0.5s ease-out;
-          animation: boost 2.2s 0.5s ease-out;
+}
+
+.dsgn {
+  width: 70%;
+  background-color: #4CAF50;
 }
 
 .js {
-  width: 40%;
+  width: 60%;
   background-color: #f44336;
-  -webkit-animation: boost 2s 0.5s ease-out;
-          animation: boost 2s 0.5s ease-out;
 }
 
 .py {
   width: 50%;
   background-color: #e0e003;
-  -webkit-animation: boost 1.8s 0.5s ease-out;
-          animation: boost 1.8s 0.5s ease-out;
 }
 
 .li {
   width: 80%;
   background-color: #4080bf;
-  -webkit-animation: boost 1.4s 0.5s ease-out;
-          animation: boost 1.4s 0.5s ease-out;
 }
 
 .ps {
   width: 60%;
   background-color: #00ccff;
-  -webkit-animation: boost 1.2s 0.5s ease-out;
-          animation: boost 1.2s 0.5s ease-out;
 }
 
 .ppr {
   width: 45%;
   background-color: #d147a3;
-  -webkit-animation: boost 1s 0.5s ease-out;
-          animation: boost 1s 0.5s ease-out;
 }
 
 @-webkit-keyframes boost {
   0% {
-    width: 0;
+    opacity: 0.9;
   }
   100% {
-    width: 1;
+    opacity: 1;
   }
 }
 
 @keyframes boost {
   0% {
-    width: 0;
+    opacity: 0.9;
   }
   100% {
-    width: 1;
+    opacity: 1;
   }
 }
 

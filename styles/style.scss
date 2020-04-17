@@ -52,11 +52,14 @@ nav{
         font-weight: 900;
         font-size: 20px;
         color: #fff;
+        animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        visibility: hidden;        
     }
     #social{
         margin: 0px auto;
         a{
             color: $light;
+            margin: 0px 3px;
             font-size: 20px;
             transition: all 0.3s ease 0s;
             &:hover{
@@ -70,7 +73,7 @@ nav{
             a{
                 font-weight: 700;
                 color: $light;
-                padding: 0px 20px;
+                padding: 0px 15px;
                 font-family: $primefont;
                 transition: all 0.3s ease 0s;
                 &:hover{
@@ -84,6 +87,7 @@ nav{
     }
     #blg{
         padding: 8px 16px;
+        margin-left: 20px;
         background-color: $accent;
         font-family: $primefont;
         border: none;
@@ -239,9 +243,8 @@ p{
     height: 27px;
     margin: 10px 30px;
     border-radius: 10px;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-duration:0.3s;
     background-color: $grey;
+    animation: fade-in 1s .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .skills {
     text-align: right; /* Right-align text */
@@ -251,51 +254,42 @@ p{
     font-weight: bold;
     letter-spacing: 0.5px;
     padding: 3px 5px 15px 0px; 
-    color: white; 
-    transition-delay: 0.3s;
-    transition-timing-function: linear;
-} 
-.dsgn {
-    width: 60%;
-    background-color: #4CAF50;
-    animation: boost 1.6s 0.5s ease-out;
-} 
+    color: white;
+}
 .css {
-    width: 97%; 
+    width: 99%; 
     background-color: #2196F3;
-    animation: boost 2.2s 0.5s ease-out;
+}  
+.dsgn {
+    width: 70%;
+    background-color: #4CAF50;
 } 
 .js {
-    width: 40%; 
+    width: 60%; 
     background-color: #f44336;
-    animation: boost 2s 0.5s ease-out;
 } 
 .py {
     width: 50%; 
     background-color: #e0e003;
-    animation: boost 1.8s 0.5s ease-out;
 } 
 .li {
     width: 80%; 
     background-color: #4080bf;
-    animation: boost 1.4s 0.5s ease-out;
 }
 .ps {
     width: 60%; 
     background-color: #00ccff;
-    animation: boost 1.2s 0.5s ease-out;
 }
 .ppr {
     width: 45%; 
     background-color: #d147a3;
-    animation: boost 1s 0.5s ease-out;
 }   
 
 
 // Animations
 @keyframes boost{
-    0%{width: 0;}
-    100%{width: 1;}
+    0%{opacity: 0.9;}
+    100%{opacity: 1;}
 }
 @keyframes width{
     0%{width: 1%;}
