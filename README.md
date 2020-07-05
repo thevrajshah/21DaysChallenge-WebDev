@@ -1,8 +1,10 @@
-# 21DaysChallenge_WebTechnology
+# 21 Days Challenge - WebDevelopment
 
-This is a Portfolio Website project. I'm also trying build a blog inside this website, either independent or hyperlinked to Medium.
-Link to the Website: http://thevrajshah.cf/
-Technologies:
+This is a Portfolio Website project build as a part of my project during the 21DaysChallenge.
+
+Link to the Website: https://thevrajshah.ml/
+
+# Technologies:
 - HTML/CSS
 - SASS
 - Javascript
